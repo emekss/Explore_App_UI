@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/components/header_list.dart';
+import 'package:flutter_application_1/components/list.dart';
 import 'package:flutter_application_1/components/header_row.dart';
+import 'package:flutter_application_1/components/travel_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -48,6 +49,13 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
+          Expanded(
+            child: ListView.builder(
+                itemCount: 2,
+                itemBuilder: (context, index) {
+                  return TravelCard();
+                }),
+          )
         ],
       ),
     );
