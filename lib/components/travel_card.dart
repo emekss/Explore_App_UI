@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/components/add_button.dart';
 
 class TravelCard extends StatelessWidget {
-  const TravelCard({super.key});
+  final String country;
+  final String title;
+  const TravelCard({super.key, required this.country, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -16,26 +18,29 @@ class TravelCard extends StatelessWidget {
         height: 200,
         width: 250,
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(20.0),
           child: Row(
             children: [
-              const Column(
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'AGRA',
-                    style: TextStyle(
+                    country,
+                    style: const TextStyle(
                       color: Colors.white,
-                      fontSize: 20,
+                      fontSize: 15,
                     ),
                   ),
+                  const SizedBox(height: 10),
                   Text(
-                    'Taj Mahal',
-                    style: TextStyle(
+                    title,
+                    style: const TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
-                  AddButton(),
+                  const SizedBox(height: 20),
+                  const AddButton(),
                 ],
               ),
             ],

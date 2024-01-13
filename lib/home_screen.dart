@@ -54,11 +54,14 @@ class HomeScreen extends StatelessWidget {
                 scrollDirection: Axis.vertical,
                 itemCount: 3,
                 itemBuilder: (context, index) {
-                  return const TravelCard();
+                  return const TravelCard(
+                    country: '',
+                    title: '',
+                  );
                 }),
           ),
           Image.asset(
-            'assets/images/taj.jpg',
+            'assets/images/redfort.jpg',
             height: 40,
             width: 60,
           )
