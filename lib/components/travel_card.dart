@@ -6,17 +6,48 @@ class TravelCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
-      height: MediaQuery.of(context).size.height * 0.5,
-      width: MediaQuery.of(context).size.width * 0.4,
-      child: Row(
-        children: [
-          const Column(
-            children: [Text('AGRA'), Text('Taj Mahal'), AddButton()],
+    return Padding(
+      padding: const EdgeInsets.all(30.0),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          color: const Color.fromARGB(255, 83, 104, 120),
+        ),
+        height: 200,
+        width: 250,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            children: [
+              const Column(
+                children: [
+                  Text(
+                    'AGRA',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
+                  ),
+                  Text(
+                    'Taj Mahal',
+                    style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
+                  AddButton(),
+                ],
+              ),
+              ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.asset(
+                    'assets/images/taj.jpg',
+                    height: 30,
+                    width: 40,
+                  ))
+            ],
           ),
-          Image.asset('assets/images/taj.jpg')
-        ],
+        ),
       ),
     );
   }

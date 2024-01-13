@@ -6,10 +6,12 @@ class AddButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 30,
+      height: 40,
       decoration:
           const BoxDecoration(color: Colors.white, shape: BoxShape.circle),
-      child: const Icon(Icons.add),
+      child: const Icon(
+        Icons.add,
+      ),
     );
   }
 }
