@@ -7,7 +7,7 @@ class TravelCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(30.0),
+      padding: const EdgeInsets.all(20.0),
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
@@ -41,7 +41,7 @@ class TravelCard extends StatelessWidget {
               ClipRRect(
                   borderRadius: BorderRadius.circular(12),
                   child: Image.asset(
-                    'assets/images/taj.jpg',
+                    'assets/images/08tajmahal5.jpg',
                     height: 30,
                     width: 40,
                   ))

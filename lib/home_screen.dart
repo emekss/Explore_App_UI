@@ -16,47 +16,50 @@ class HomeScreen extends StatelessWidget {
         leading: const Icon(Icons.search_rounded),
         actions: const [Icon(Icons.menu_rounded)],
       ),
-      body: Column(
-        children: [
-          Container(
-            height: MediaQuery.of(context).size.height * 0.15,
-            width: MediaQuery.of(context).size.width,
-            decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 83, 104, 120),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              height: MediaQuery.of(context).size.height * 0.15,
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(
+                color: Color.fromARGB(255, 83, 104, 120),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Discover',
+                    style: TextStyle(fontSize: 45, color: Colors.white),
+                  ),
+                  Expanded(
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: header.length,
+                        itemBuilder: (context, index) {
+                          return Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: HeaderRowItem(label: header[index]),
+                              ),
+                            ],
+                          );
+                        }),
+                  )
+                ],
+              ),
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  'Discover',
-                  style: TextStyle(fontSize: 45, color: Colors.white),
-                ),
-                Expanded(
-                  child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: header.length,
-                      itemBuilder: (context, index) {
-                        return Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: HeaderRowItem(label: header[index]),
-                            ),
-                          ],
-                        );
-                      }),
-                )
-              ],
-            ),
-          ),
-          Expanded(
-            child: ListView.builder(
-                itemCount: 2,
-                itemBuilder: (context, index) {
-                  return TravelCard();
-                }),
-          )
-        ],
+            Expanded(
+              child: ListView.builder(
+                  scrollDirection: Axis.vertical,
+                  itemCount: 3,
+                  itemBuilder: (context, index) {
+                    return TravelCard();
+                  }),
+            )
+          ],
+        ),
       ),
     );
   }
