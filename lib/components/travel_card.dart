@@ -38,13 +38,6 @@ class TravelCard extends StatelessWidget {
                   AddButton(),
                 ],
               ),
-              ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Image.asset(
-                    'assets/images/08tajmahal5.jpg',
-                    height: 30,
-                    width: 40,
-                  ))
             ],
           ),
         ),
