@@ -61,11 +61,7 @@ class HomeScreen extends StatelessWidget {
                   );
                 }),
           ),
-          Image.asset(
-            'assets/images/redfort.jpg',
-            height: 40,
-            width: 60,
-          )
+          Image.asset("assets/images/rentlogo.jpeg")
         ],
       ),
     );
