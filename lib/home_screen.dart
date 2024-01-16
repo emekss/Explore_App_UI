@@ -41,9 +41,9 @@ class HomeScreen extends StatelessWidget {
                   Text(
                     'Discover',
                     style: TextStyle(
-                      fontSize: 45,
-                      color: Theme.of(context).colorScheme.tertiary,
-                    ),
+                        fontSize: 45,
+                        color: Theme.of(context).colorScheme.tertiary,
+                        fontWeight: FontWeight.w500),
                   ),
                   Expanded(
                     child: ListView.builder(

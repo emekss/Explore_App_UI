@@ -1,9 +1,17 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/home_screen.dart';
-import 'package:flutter_application_1/theme/theme.dart';
+import 'package:flutter_application_1/theme/theme_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -15,8 +23,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const HomeScreen(),
-      theme: lightMode,
-      darkTheme: darkMode,
+      theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
 }

@@ -11,6 +11,7 @@ class TravelCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Card(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         elevation: 4,
         child: Container(
           decoration: BoxDecoration(
@@ -29,9 +30,9 @@ class TravelCard extends StatelessWidget {
                     Text(
                       country,
                       style: TextStyle(
-                        color: Theme.of(context).colorScheme.tertiary,
-                        fontSize: 15,
-                      ),
+                          color: Theme.of(context).colorScheme.tertiary,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 10),
                     Text(

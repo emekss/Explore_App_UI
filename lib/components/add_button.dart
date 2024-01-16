@@ -9,8 +9,9 @@ class AddButton extends StatelessWidget {
       height: 40,
       decoration:
           const BoxDecoration(color: Colors.white, shape: BoxShape.circle),
-      child: const Icon(
+      child: Icon(
         Icons.add,
+        color: Theme.of(context).colorScheme.tertiary,
       ),
     );
   }
