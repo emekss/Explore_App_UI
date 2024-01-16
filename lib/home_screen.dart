@@ -14,8 +14,16 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Theme.of(context).colorScheme.primary,
-        leading: const Icon(Icons.search_rounded),
-        actions: const [ThemeButton()],
+        leading: Icon(
+          Icons.search_rounded,
+          color: Theme.of(context).colorScheme.tertiary,
+        ),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.all(10.0),
+            child: ThemeButton(),
+          )
+        ],
       ),
       body: Column(
         children: [
@@ -30,9 +38,12 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     'Discover',
-                    style: TextStyle(fontSize: 45, color: Colors.white),
+                    style: TextStyle(
+                      fontSize: 45,
+                      color: Theme.of(context).colorScheme.tertiary,
+                    ),
                   ),
                   Expanded(
                     child: ListView.builder(

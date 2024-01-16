@@ -10,7 +10,7 @@ class HeaderRowItem extends StatelessWidget {
       height: 40,
       width: 100,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Theme.of(context).colorScheme.tertiary,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Center(

@@ -14,7 +14,7 @@ class ThemeButton extends StatelessWidget {
         width: MediaQuery.of(context).size.width * 0.12,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          color: Colors.white,
+          color: Theme.of(context).colorScheme.tertiary,
         ),
         child: const Icon(Icons.toggle_on_rounded),
       ),
