@@ -13,7 +13,7 @@ class TravelCard extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          color: const Color.fromARGB(255, 83, 104, 120),
+          color: Theme.of(context).colorScheme.primary,
         ),
         height: 200,
         width: 250,

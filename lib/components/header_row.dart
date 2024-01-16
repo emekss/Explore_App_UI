@@ -16,10 +16,10 @@ class HeaderRowItem extends StatelessWidget {
       child: Center(
         child: Text(
           label,
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 15,
             fontWeight: FontWeight.bold,
-            color: Color.fromARGB(255, 83, 104, 120),
+            color: Theme.of(context).colorScheme.primary,
           ),
         ),
       ),
