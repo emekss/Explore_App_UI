@@ -7,11 +7,13 @@ class AddButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 40,
-      decoration:
-          const BoxDecoration(color: Colors.white, shape: BoxShape.circle),
+      decoration: const BoxDecoration(
+        color: Colors.white,
+        shape: BoxShape.circle,
+      ),
       child: Icon(
         Icons.add,
-        color: Theme.of(context).colorScheme.tertiary,
+        color: Theme.of(context).colorScheme.secondary,
       ),
     );
   }

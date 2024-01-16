@@ -11,22 +11,24 @@ class ThemeButton extends StatefulWidget {
 }
 
 class _ThemeButtonState extends State<ThemeButton> {
-  bool isDarkMode = false;
+  bool get isDarkMode => false;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        // Toggle Button
-        IconButton(
-          icon: isDarkMode ? Icon(Icons.wb_sunny) : Icon(Icons.brightness_2),
-          onPressed: () {
-            Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
-          },
-        ),
-        // Additional content...
-      ],
+    return SizedBox(
+      height: 30,
+      width: 40,
+      child:
+          // Toggle Button
+          IconButton(
+        color: Theme.of(context).colorScheme.tertiary,
+        icon: isDarkMode
+            ? const Icon(Icons.wb_sunny)
+            : const Icon(Icons.brightness_2),
+        onPressed: () {
+          Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
+        },
+      ),
     );
   }
 }
