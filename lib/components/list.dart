@@ -5,7 +5,7 @@ final List header = [
   'POP',
 ];
 
-final List<Map<String, dynamic>> travelCardItem = [
+final List<Map<String, Object>> travelCardItem = [
   {
     'country': 'AGRA',
     'title': 'Taj Mahal',

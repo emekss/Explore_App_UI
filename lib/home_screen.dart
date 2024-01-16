@@ -54,9 +54,10 @@ class HomeScreen extends StatelessWidget {
                 scrollDirection: Axis.vertical,
                 itemCount: 3,
                 itemBuilder: (context, index) {
-                  return const TravelCard(
-                    country: '',
-                    title: '',
+                  final item = travelCardItem[index];
+                  return TravelCard(
+                    country: item['country'] as String,
+                    title: item['title'] as String,
                   );
                 }),
           ),
