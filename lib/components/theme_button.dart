@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ThemeButton extends StatelessWidget {
-  const ThemeButton({
+class ThemeButton1 extends StatelessWidget {
+  const ThemeButton1({
     super.key,
   });
 

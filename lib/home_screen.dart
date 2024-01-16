@@ -4,6 +4,8 @@ import 'package:flutter_application_1/components/header_row.dart';
 import 'package:flutter_application_1/components/theme_button.dart';
 import 'package:flutter_application_1/components/travel_card.dart';
 
+import 'components/new_theme_button.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
