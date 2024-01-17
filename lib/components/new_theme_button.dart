@@ -22,11 +22,10 @@ class _ThemeButtonState extends State<ThemeButton> {
           // Toggle Button
           IconButton(
         color: Theme.of(context).colorScheme.tertiary,
-        icon: isDarkMode
-            ? const Icon(Icons.wb_sunny)
-            : const Icon(Icons.brightness_2),
+        icon: const Icon(Icons.brightness_2),
         onPressed: () {
           Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
+          const Icon(Icons.wb_sunny_rounded);
         },
       ),
     );
